@@ -1,10 +1,14 @@
+body {
+  padding: 0 2em !important;
+}
+
 .card {
   background-color: #fff;
 }
 
 .card-img-top {
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.8;
   object-fit: cover;
 }
 
@@ -19,6 +23,7 @@
   justify-content: center;
 }
 
-.h-50 {
+.h50 {
   min-height: 50vh;
+  height: 100%;
 }

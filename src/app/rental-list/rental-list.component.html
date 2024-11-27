@@ -1,9 +1,11 @@
-<div class="container">
+<div class="container property">
   <ul class="list-group">
     <li *ngFor="let rental of rentals" class="list-group-item" (click)="openDetail(rental)">
-      <h5>{{ rental.formattedAddress }}</h5>
+      <h4>{{ rental.formattedAddress }}</h4>
       <p>Size: {{ rental.squareFootage }} sqft</p>
       <p>Price: ${{ rental.price }}</p>
+      <p>Bedrooms: ${{ rental.bedrooms }}</p>
+      <p>Bathrooms: ${{ rental.bathrooms }}</p>
     </li>
   </ul>
 </div>

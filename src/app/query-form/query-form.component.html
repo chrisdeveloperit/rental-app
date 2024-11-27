@@ -1,6 +1,7 @@
 <div class="container">
   <form (ngSubmit)="onSubmit()">
     <div class="mb-3">
+      <a name="query-form"></a>
       <label for="city" class="form-label">City</label>
       <input type="text" class="form-control" id="city" [(ngModel)]="query.city" name="city">
     </div>
@@ -28,4 +29,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Search</button>
   </form>
+</div>
+<div class="container" id="rental-list">
+  <app-rental-list [rentals]="rentals"></app-rental-list>
+  <div class="d-flex flex-row-reverse p-2"><a href="#query-form">Back to Search</a></div>
 </div>

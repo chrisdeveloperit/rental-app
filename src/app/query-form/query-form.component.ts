@@ -10,17 +10,28 @@ export class QueryFormComponent {
     city: 'Austin',
     state: 'TX',
     zipCode: '',
-    propertyType: 'Single Family',
-    bedrooms: 3,
-    bathrooms: 2.5
+    propertyType: '',
+    bedrooms: 2,
+    bathrooms: 1,
+    status: 'Active',
+    limit: 20
   };
   propertyTypes = ['Single Family', 'Condo', 'Apartment', 'Townhouse', 'Manufactured'];
+  rentals: any[] = [];
 
   constructor(private rentalService: RentalService) {}
 
   onSubmit() {
-    this.rentalService.getRentals(this.query).subscribe(data => {
+    this.rentalService.getRentals2(this.query).subscribe(data => {
       // Pass data to rental-list component
+      console.log(data);
+      this.rentals = data;
+      // Scroll to the rental-list element
+    const rentalListElement = document.getElementById('rental-list');
+    if (rentalListElement) {
+      rentalListElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
     });
   }
 }
