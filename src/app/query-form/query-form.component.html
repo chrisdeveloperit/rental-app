@@ -1,1 +1,31 @@
-<p>query-form works!</p>
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="city" class="form-label">City</label>
+      <input type="text" class="form-control" id="city" [(ngModel)]="query.city" name="city">
+    </div>
+    <div class="mb-3">
+      <label for="state" class="form-label">State</label>
+      <input type="text" class="form-control" id="state" [(ngModel)]="query.state" name="state">
+    </div>
+    <div class="mb-3">
+      <label for="zipCode" class="form-label">Zip Code</label>
+      <input type="text" class="form-control" id="zipCode" [(ngModel)]="query.zipCode" name="zipCode">
+    </div>
+    <div class="mb-3">
+      <label for="propertyType" class="form-label">Property Type</label>
+      <select class="form-select" id="propertyType" [(ngModel)]="query.propertyType" name="propertyType">
+        <option *ngFor="let type of propertyTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="bedrooms" class="form-label">Bedrooms</label>
+      <input type="number" class="form-control" id="bedrooms" [(ngModel)]="query.bedrooms" name="bedrooms">
+    </div>
+    <div class="mb-3">
+      <label for="bathrooms" class="form-label">Bathrooms</label>
+      <input type="number" class="form-control" id="bathrooms" [(ngModel)]="query.bathrooms" name="bathrooms">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>

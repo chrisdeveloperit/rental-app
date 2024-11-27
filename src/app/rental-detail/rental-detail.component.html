@@ -1,1 +1,20 @@
-<p>rental-detail works!</p>
+<div class="modal" [ngClass]="{'show': showModal}" tabindex="-1" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ rental.formattedAddress }}</h4>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <p>Property Type: {{ rental.propertyType }}</p>
+        <p>Bedrooms: {{ rental.bedrooms }}</p>
+        <p>Bathrooms: {{ rental.bathrooms }}</p>
+        <p>Size: {{ rental.squareFootage }} sqft</p>
+        <p>Lot Size: {{ rental.lotSize }} sqft</p>
+        <p>Year Built: {{ rental.yearBuilt }}</p>
+        <p>Price: ${{ rental.price }}</p>
+        <p>HOA Fee: ${{ rental.hoa.fee }}</p>
+      </div>
+    </div>
+  </div>
+</div>

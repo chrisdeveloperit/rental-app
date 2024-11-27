@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+}
+
+:root,
+[data-bs-theme=light] {
+  --bs-body-bg: #e9ecef;
+  --bs-body-color: #212529;
+  --bs-link-color: #0056b3;
+  --bs-link-hover-color: #0d6efd;
+  --bs-link-hover-text-decoration: underline;
+  --bs-table-bg: #fff;
+  --bs-table-accent-bg: #f8f9fa;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 123, 255, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 123, 255, 0.1);
+  --bs-border-color: #dee2e6;
+
+  --bs-form-color: #212529;
+  --bs-form-bg: #fff;
+  --bs-form-label-color: #555;
+  --bs-form-group-margin-bottom: 1rem;
+  --bs-form-group-text-align: left;
+  --bs-form-input-color: #444;
+  --bs-form-input-bg: #fff;
+  --bs-form-input-border-color: #c1c1c1;
+}

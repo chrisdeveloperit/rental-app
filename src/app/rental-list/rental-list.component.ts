@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rental-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './rental-list.component.html',
-  styleUrl: './rental-list.component.scss'
+  templateUrl: './rental-list.component.html'
 })
 export class RentalListComponent {
+  @Input() rentals: any[] = [];
 
+  openDetail(rental: any) {
+    // Open modal with rental details
+  }
 }

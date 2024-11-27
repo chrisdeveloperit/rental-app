@@ -1,1 +1,9 @@
-<p>rental-list works!</p>
+<div class="container">
+  <ul class="list-group">
+    <li *ngFor="let rental of rentals" class="list-group-item" (click)="openDetail(rental)">
+      <h5>{{ rental.formattedAddress }}</h5>
+      <p>Size: {{ rental.squareFootage }} sqft</p>
+      <p>Price: ${{ rental.price }}</p>
+    </li>
+  </ul>
+</div>
