@@ -1,11 +1,11 @@
-<div class="container property">
+<div class="container">
   <ul class="list-group">
-    <li *ngFor="let rental of rentals" class="list-group-item" (click)="openDetail(rental)">
-      <h4>{{ rental.formattedAddress }}</h4>
+    <li *ngFor="let rental of rentals" class="list-group-item property" (click)="openDetail(rental)">
+      <p class="fw-bold"><img src="/house_icon-128.png" alt="House Icon" class="house-icon">{{ rental.formattedAddress }}</p>
       <p>Size: {{ rental.squareFootage }} sqft</p>
       <p>Price: ${{ rental.price }}</p>
-      <p>Bedrooms: ${{ rental.bedrooms }}</p>
-      <p>Bathrooms: ${{ rental.bathrooms }}</p>
+      <p>Bedrooms: {{ rental.bedrooms }}</p>
+      <p>Bathrooms: {{ rental.bathrooms }}</p>
     </li>
   </ul>
 </div>
