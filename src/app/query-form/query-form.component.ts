@@ -19,7 +19,9 @@ export class QueryFormComponent {
   propertyTypes = ['Single Family', 'Condo', 'Apartment', 'Townhouse', 'Manufactured'];
   rentals: any[] = [];
 
-  constructor(private rentalService: RentalService) {}
+  constructor(private rentalService: RentalService) {
+    console.log('QueryFormComponent constructor');
+  }
 
   onSubmit() {
     this.rentalService.getRentals2(this.query).subscribe(data => {

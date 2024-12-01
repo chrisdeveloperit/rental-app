@@ -26,7 +26,7 @@ import { RentalService } from './services/rental.service';
     RentalDetailComponent
 
   ],
-  providers: [ RentalService],
+  providers: [ RentalService, RentalDetailComponent],
    bootstrap: [AppComponent] 
 })
 export class AppModule { }

@@ -9,10 +9,12 @@ import { RentalDetailComponent } from '../rental-detail/rental-detail.component'
 export class RentalListComponent {
   @Input() rentals: any[] = [];
 
-  constructor(private rentalDetailComponent: RentalDetailComponent) {}
+  constructor(private rentalDetailComponent: RentalDetailComponent | null) {}
 
   openDetail(rental: any) {
-    this.rentalDetailComponent.rental = rental;
-    this.rentalDetailComponent.openModal();
+    if(this.rentalDetailComponent) {
+      this.rentalDetailComponent.rental = rental;
+      this.rentalDetailComponent.openModal();
+    }
   }
 }
